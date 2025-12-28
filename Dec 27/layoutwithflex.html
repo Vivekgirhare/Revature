@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox layout Example</title>
+
+    <Style>
+        .container{
+            display:flex;
+            gap : 1rem;
+            background-color: beige;
+            padding: 1rem;
+        }
+
+        .item{
+            position: relative;
+            width: 150px;
+            height: 100px;
+            border: 2px solid rgb(95, 94, 94);
+            background-color: blanchedalmond;
+            padding: 1rem;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2rem;
+            
+        }
+
+        .item::after{
+            content:"New";
+            position: absolute;
+            top:0.25rem;
+            background: crimson;
+            color: bisque;
+            padding: 0.25rem 0.5rem;
+            font-size: 0.75rem;
+            border-radius: 0.2rem;
+            top: 5px;
+            left: 8rem;
+        }
+
+
+    </Style>
+
+
+</head>
+<body>
+    <h2>Flex layout with css : after badge</h2>
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    
+</body>
+</html>

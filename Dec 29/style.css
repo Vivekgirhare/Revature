@@ -1,0 +1,10 @@
+.container{
+    width: 90%;
+    margin: auto;
+    /* background: wheat; */
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}

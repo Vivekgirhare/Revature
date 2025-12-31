@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Sum Max Find</title>
+</head>
+
+<body>
+<h2>Enter Array Elements</h2>
+
+<input type="text" id="arrInput" >
+<button onclick="storeArray()">Enter</button>
+
+<h3>Array: <span id="showArray"></span></h3>
+
+<button onclick="findSum()">Find Sum</button>
+<button onclick="findMax()">Find Maximum</button>
+
+<h3 id="result"></h3>
+
+   <script>
+
+
+
+
+let newarray = [];
+function storeArray() {
+    let input = document.getElementById("arrInput").value;
+
+    newarray = input.split(',').map(Number);
+
+    document.getElementById("showArray").innerHTML = `[ ${newarray} ]`;
+    console.log("Array Added:", newarray);
+}
+
+function findSum() {
+    const sum = newarray.reduce((total, i) => total + i, 0);
+    console.log("Sum =", sum);
+    document.getElementById("result").innerHTML = "Sum of Array = " + sum;
+}
+
+
+function findMax() {
+    const maxvalue = newarray.reduce((x, y) => x > y ? x : y);
+    console.log("Max Value =", maxvalue);
+    document.getElementById("result").innerHTML = "Maximum Value = " + maxvalue;
+}
+</script>
+
+</body>
+</html>

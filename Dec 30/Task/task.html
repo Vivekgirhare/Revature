@@ -1,0 +1,76 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fruits = [];
+
+        function addfruits(){
+            let fruit = document.getElementById("fruitInput").value;
+        
+        
+
+        fruits.push(fruit);
+        document.getElementById("fruitInput").value="";
+        displayFruits();
+
+        }
+
+    </script>
+    
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fruit List</title>
+</head>
+<body>
+
+<h2>Enter Fruit Name</h2>
+
+<input type="text" id="fruitInput" placeholder="Enter fruit name">
+<button onclick="addFruit()">Add Fruit</button>
+
+<h3>Fruits List:</h3>
+<ol id="fruitList"></ol>
+
+<script>
+    let fruits = [];
+
+    function addFruit() {
+        let fruit = document.getElementById("fruitInput").value;
+
+        // if(fruit === ""){
+        //     alert("Please enter a fruit name");
+        //     return;
+        // }
+
+        fruits.push(fruit);
+        document.getElementById("fruitInput").value = "";
+
+        displayFruits();
+    }
+
+    function displayFruits(){
+        let list = document.getElementById("fruitList");
+        list.innerHTML = "";
+
+        for(let i = 0; i < fruits.length; i++){
+            let li = document.createElement("li");
+            li.textContent = fruits[i];
+            list.appendChild(li);
+        }
+    }
+</script>
+
+</body>
+</html>

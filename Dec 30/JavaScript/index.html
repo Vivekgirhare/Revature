@@ -1,0 +1,94 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.js">
+ 
+     <script>
+        function Addition(){
+            a = document.getElementsByName("input")[0].value;
+            b = document.getElementsByName("input")[1].value;
+            document.getElementById("result").innerHTML = parseInt(a) + parseInt(b);
+            return parseInt(a) + parseInt(b);
+        }
+     </script>
+</head>
+<body>
+    <h1>
+        welcome to the Exercise
+    </h1>
+    <p>Lorem ipsum dolor sit amet consectetur.</p>
+
+    <input type="number" placeholder="first number">
+    <input type="number" placeholder="Second number">
+    <br>
+
+    <button onclick="Addition()">Add</button>
+    <p>the Sum is - </p>
+
+    
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Two Numbers</title>
+
+    <script>
+        function Addition(){
+            let a = document.getElementById("num1").value;
+            let b = document.getElementById("num2").value;
+
+            document.getElementById("result").innerHTML = 
+                "The Sum is: " + (parseInt(a) + parseInt(b));
+        }
+
+        function Subtraction(){
+            let a = document.getElementById("num1").value;
+            let b = document.getElementById("num2").value;
+
+            document.getElementById("result").innerHTML = 
+                "The Subtraction of number is: " + (parseInt(a) - parseInt(b));
+        }
+
+        function Multiply(){
+            let a = document.getElementById("num1").value;
+            let b = document.getElementById("num2").value;
+
+            document.getElementById("result").innerHTML = 
+                "The Multiply of numbers is: " + (parseInt(a) * parseInt(b));
+        }
+
+        function Division(){
+            let a = document.getElementById("num1").value;
+            let b = document.getElementById("num2").value;
+
+            document.getElementById("result").innerHTML = 
+                "The Division of number is: " + (parseInt(a) / parseInt(b));
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <p>Enter two numbers:</p>
+
+    <input type="number" id="num1" placeholder="First number">
+    <input type="number" id="num2" placeholder="Second number">
+    <br><br>
+
+    <button onclick="Addition()">+</button>
+    <button onclick="Subtraction()">-</button>
+    <button onclick="Multiply()">x</button>
+    <button onclick="Division()">/</button>
+
+    <p id="result"></p>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Promise and setTime out</title>
+</head>
+<body>
+<script>
+  console.log("Started");
+  setTimeout(()=>{
+    console.log("......Time out...");
+  },0);
+ Promise.resolve().then(()=>{
+  console.log("Promise inside");
+ });
+ console.log('ended');
+
+ console.log("Nested promises");
+ Promise.resolve().then(()=>{
+    console.log("Inside promise 1.");
+    Promise.resolve().then(()=>{
+        console.log("promise 2");
+    });
+ });
+ console.log("setTimeout  inside promise");
+ promise.resolve().then(() =>{
+    console.log("promise");
+
+    setTimeout(() =>{
+        console.log("Timeout");
+    },0);
+
+ });
+</script>
+ 
+</body>
+</html>

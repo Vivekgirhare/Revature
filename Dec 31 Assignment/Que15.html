@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form id="myForm">
+  <input id="name">
+  <button type="submit">Submit</button>
+</form>
+
+<p id="error"></p>
+
+    <script>
+const form = document.getElementById("myForm");
+const input = document.getElementById("name");
+const error = document.getElementById("error");
+
+form.addEventListener("submit", e => {
+  if(input.value === ""){
+    e.preventDefault();
+    error.textContent = "Please enter your name";
+  }
+});
+</script>
+    
+</body>
+</html>

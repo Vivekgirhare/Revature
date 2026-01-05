@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Demo</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+<button id="btn">Hide Text</button>
+
+<br><br>
+
+<input type="text" id="inputText" placeholder="Enter something...">
+<button id="showBtn">Add Text</button>
+
+<h3>Output:</h3>
+<ul id="outputList"></ul>
+
+<p>Hello, this is jQuery!!</p>
+<h2>this is h2 text</h2>
+
+<script>
+$(document).ready(function () {
+
+    // Existing button work
+    $("#btn").click(function () {
+        $("p").css("color", "red");
+        $("h2").hide();
+    });
+
+    // Show input text in order
+    $("#showBtn").click(function () {
+        var text = $("#inputText").val();
+
+        if(text !== ""){
+            $("#outputList").append("<li>" + text + "</li>");
+            $("#inputText").val("");
+        }
+    });
+});
+</script>
+
+</body>
+</html>

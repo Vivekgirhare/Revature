@@ -1,0 +1,26 @@
+<!-- 7. Array filter – Search Feature
+
+You want to show only available products from a product list.
+ Use filter() to return items with inStock === true. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+const products = [
+  {name:"Phone", inStock:true},
+  {name:"TV", inStock:false}
+];
+
+const available = products.filter(p => p.inStock);
+
+console.log(available);
+</script>
+    
+</body>
+</html>

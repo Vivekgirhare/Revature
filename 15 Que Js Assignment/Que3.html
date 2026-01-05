@@ -1,0 +1,25 @@
+<!-- 3. JSON.parse()
+
+You receive this API response as a string:
+
+'{"id":101,"name":"Laptop","price":50000}'
+
+ Convert it into a JavaScript object and access the name. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let jsonData = '{"id":101,"name":"Laptop","price":50000}';
+let obj = JSON.parse(jsonData);
+
+document.write("Product Name: " + obj.name);
+    </script>
+    
+</body>
+</html>
